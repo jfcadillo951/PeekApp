@@ -14,6 +14,7 @@
 		949D9AC3269B79ED0047B195 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9AC2269B79ED0047B195 /* ApiError.swift */; };
 		949D9AC5269BA02A0047B195 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9AC4269BA02A0047B195 /* UIImageView+Extension.swift */; };
 		949D9AC7269BA18B0047B195 /* UiViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9AC6269BA18B0047B195 /* UiViewController+Extension.swift */; };
+		949D9ACA269BAE030047B195 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9AC9269BAE030047B195 /* GeneratedMocks.swift */; };
 		94ED99B9269A9BF100B91B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99B8269A9BF100B91B23 /* AppDelegate.swift */; };
 		94ED99BD269A9BF100B91B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99BC269A9BF100B91B23 /* ViewController.swift */; };
 		94ED99C0269A9BF100B91B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94ED99BE269A9BF100B91B23 /* Main.storyboard */; };
@@ -83,6 +84,7 @@
 		949D9AC2269B79ED0047B195 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		949D9AC4269BA02A0047B195 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		949D9AC6269BA18B0047B195 /* UiViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Extension.swift"; sourceTree = "<group>"; };
+		949D9AC9269BAE030047B195 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		94ED99B5269A9BF100B91B23 /* PeekApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ED99B8269A9BF100B91B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94ED99BC269A9BF100B91B23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,18 +203,18 @@
 		94ED99B7269A9BF100B91B23 /* PeekApp */ = {
 			isa = PBXGroup;
 			children = (
-				94ED9A32269B4F7900B91B23 /* Content */,
-				94ED9A00269AAEE100B91B23 /* RepositoryDetails.graphql */,
-				94ED99FC269AAD0C00B91B23 /* SearchRepositories.graphql */,
-				94ED99F8269AAB4A00B91B23 /* Core */,
 				94ED99F4269AAAE100B91B23 /* API.swift */,
 				94ED99B8269A9BF100B91B23 /* AppDelegate.swift */,
-				94ED99BC269A9BF100B91B23 /* ViewController.swift */,
-				94ED99BE269A9BF100B91B23 /* Main.storyboard */,
 				94ED99C4269A9BF500B91B23 /* Assets.xcassets */,
-				94ED99C6269A9BF500B91B23 /* LaunchScreen.storyboard */,
+				94ED9A32269B4F7900B91B23 /* Content */,
+				94ED99F8269AAB4A00B91B23 /* Core */,
 				94ED99C9269A9BF500B91B23 /* Info.plist */,
+				94ED99C6269A9BF500B91B23 /* LaunchScreen.storyboard */,
+				94ED99BE269A9BF100B91B23 /* Main.storyboard */,
 				94ED99C1269A9BF100B91B23 /* PeekApp.xcdatamodeld */,
+				94ED9A00269AAEE100B91B23 /* RepositoryDetails.graphql */,
+				94ED99FC269AAD0C00B91B23 /* SearchRepositories.graphql */,
+				94ED99BC269A9BF100B91B23 /* ViewController.swift */,
 			);
 			path = PeekApp;
 			sourceTree = "<group>";
@@ -220,6 +222,7 @@
 		94ED99D1269A9BF500B91B23 /* PeekAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				949D9AC9269BAE030047B195 /* GeneratedMocks.swift */,
 				94ED99D2269A9BF500B91B23 /* PeekAppTests.swift */,
 				94ED99D4269A9BF500B91B23 /* Info.plist */,
 			);
@@ -442,6 +445,7 @@
 			buildConfigurationList = 94ED99E5269A9BF500B91B23 /* Build configuration list for PBXNativeTarget "PeekAppTests" */;
 			buildPhases = (
 				34076B114FC501F707C63C61 /* [CP] Check Pods Manifest.lock */,
+				949D9AC8269BAD390047B195 /* Generate mock files */,
 				94ED99CA269A9BF500B91B23 /* Sources */,
 				94ED99CB269A9BF500B91B23 /* Frameworks */,
 				94ED99CC269A9BF500B91B23 /* Resources */,
@@ -634,6 +638,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		949D9AC8269BAD390047B195 /* Generate mock files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate mock files";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Content/Data/Repository/ContentRepository.swift\" \\\n\"${INPUT_DIR}/Content/Presentation/Mapper/ContentPresentationMapper.swift\"\n";
+		};
 		94ED99F3269AA14F00B91B23 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -737,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94ED99D3269A9BF500B91B23 /* PeekAppTests.swift in Sources */,
+				949D9ACA269BAE030047B195 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
