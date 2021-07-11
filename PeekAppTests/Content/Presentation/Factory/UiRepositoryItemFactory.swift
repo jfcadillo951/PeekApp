@@ -10,17 +10,17 @@ import Foundation
 
 extension UiRepositoryItem {
     static func make(
-        name: String = "Test",
-        ownerName: String = "Owner",
+        name: String = "Name: Test",
+        ownerName: String = "Owner: Owner",
         ownerAvatar: String = "https://www.google.com",
-        numberOfStars: String = "10 stars",
+        numberOfStars: String = "10 Stars",
         year: String = UUID().uuidString,
         date: Date = Date()
     ) -> Self {
         .init(
             name: name,
             ownerName: ownerName,
-            ownerAvater: ownerAvatar,
+            ownerAvatar: ownerAvatar,
             numberOfStars: numberOfStars)
     }
 }

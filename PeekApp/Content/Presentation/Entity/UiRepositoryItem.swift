@@ -10,6 +10,6 @@ import Foundation
 struct UiRepositoryItem: Equatable {
     let name: String
     let ownerName: String
-    let ownerAvater: String
+    let ownerAvatar: String
     let numberOfStars: String
 }

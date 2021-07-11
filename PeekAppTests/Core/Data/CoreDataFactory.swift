@@ -24,15 +24,15 @@ enum CoreDataFactory {
                       "__typename": "SearchResultItemEdge",
                       "node": {
                         "__typename": "Repository",
-                        "name": "graphql",
+                        "name": "Test",
                         "owner": {
                           "__typename": "Organization",
-                          "login": "graphql-go",
-                          "avatarUrl": "https://avatars.githubusercontent.com/u/14210643?v=4"
+                          "login": "Owner",
+                          "avatarUrl": "https://www.google.com"
                         },
                         "stargazers": {
                           "__typename": "StargazerConnection",
-                          "totalCount": 7793
+                          "totalCount": 10
                         }
                       }
                     }
