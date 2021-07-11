@@ -19,7 +19,7 @@ final class ContentPresentationMapperImplTests: XCTestCase {
     override func tearDownWithError() throws {
     }
 
-    func test_map_onNotPullToRefresh() throws {
+    func test_map_notPullToRefresh() throws {
         // Arrange
         let element = CoreDataFactory.getApiSearch()!
         let expected = UiRepositoryArgs.make()
@@ -29,11 +29,13 @@ final class ContentPresentationMapperImplTests: XCTestCase {
         XCTAssertEqual(value, expected)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test_map_pullToRefresh() throws {
+        // Arrange
+        let element = CoreDataFactory.getApiSearch()!
+        let expected = UiRepositoryArgs.make(refreshData: true)
+        // Act
+        let value = mapper.map(element, pullToRefresh: true)
+        // Assert
+        XCTAssertEqual(value, expected)
     }
-
 }
