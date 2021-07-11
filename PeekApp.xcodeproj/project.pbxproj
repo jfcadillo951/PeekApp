@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		94ED99C8269A9BF500B91B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94ED99C6269A9BF500B91B23 /* LaunchScreen.storyboard */; };
 		94ED99D3269A9BF500B91B23 /* PeekAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99D2269A9BF500B91B23 /* PeekAppTests.swift */; };
 		94ED99DE269A9BF500B91B23 /* PeekAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99DD269A9BF500B91B23 /* PeekAppUITests.swift */; };
+		94ED99EF269AA0ED00B91B23 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 94ED99EE269AA0ED00B91B23 /* Apollo */; };
+		94ED99F1269AA0ED00B91B23 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 94ED99F0269AA0ED00B91B23 /* ApolloAPI */; };
+		94ED99F5269AAAE100B91B23 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99F4269AAAE100B91B23 /* API.swift */; };
+		94ED99F7269AAAF600B91B23 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99F6269AAAF600B91B23 /* Client.swift */; };
+		94ED99FE269AAD0C00B91B23 /* SearchRepositories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 94ED99FC269AAD0C00B91B23 /* SearchRepositories.graphql */; };
+		94ED9A01269AAEE100B91B23 /* RepositoryDetails.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 94ED9A00269AAEE100B91B23 /* RepositoryDetails.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,10 @@
 		94ED99D9269A9BF500B91B23 /* PeekAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeekAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ED99DD269A9BF500B91B23 /* PeekAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekAppUITests.swift; sourceTree = "<group>"; };
 		94ED99DF269A9BF500B91B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94ED99F4269AAAE100B91B23 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		94ED99F6269AAAF600B91B23 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		94ED99FC269AAD0C00B91B23 /* SearchRepositories.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchRepositories.graphql; sourceTree = "<group>"; };
+		94ED9A00269AAEE100B91B23 /* RepositoryDetails.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RepositoryDetails.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94ED99F1269AA0ED00B91B23 /* ApolloAPI in Frameworks */,
+				94ED99EF269AA0ED00B91B23 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +113,10 @@
 		94ED99B7269A9BF100B91B23 /* PeekApp */ = {
 			isa = PBXGroup;
 			children = (
+				94ED9A00269AAEE100B91B23 /* RepositoryDetails.graphql */,
+				94ED99FC269AAD0C00B91B23 /* SearchRepositories.graphql */,
+				94ED99F8269AAB4A00B91B23 /* Core */,
+				94ED99F4269AAAE100B91B23 /* API.swift */,
 				94ED99B8269A9BF100B91B23 /* AppDelegate.swift */,
 				94ED99BA269A9BF100B91B23 /* SceneDelegate.swift */,
 				94ED99BC269A9BF100B91B23 /* ViewController.swift */,
@@ -131,6 +147,22 @@
 			path = PeekAppUITests;
 			sourceTree = "<group>";
 		};
+		94ED99F8269AAB4A00B91B23 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				94ED99F9269AAB5500B91B23 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		94ED99F9269AAB5500B91B23 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				94ED99F6269AAAF600B91B23 /* Client.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94ED99E2269A9BF500B91B23 /* Build configuration list for PBXNativeTarget "PeekApp" */;
 			buildPhases = (
+				94ED99F3269AA14F00B91B23 /* ShellScript */,
 				94ED99B1269A9BF100B91B23 /* Sources */,
 				94ED99B2269A9BF100B91B23 /* Frameworks */,
 				94ED99B3269A9BF100B91B23 /* Resources */,
@@ -147,6 +180,10 @@
 			dependencies = (
 			);
 			name = PeekApp;
+			packageProductDependencies = (
+				94ED99EE269AA0ED00B91B23 /* Apollo */,
+				94ED99F0269AA0ED00B91B23 /* ApolloAPI */,
+			);
 			productName = PeekApp;
 			productReference = 94ED99B5269A9BF100B91B23 /* PeekApp.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +255,10 @@
 				Base,
 			);
 			mainGroup = 94ED99AC269A9BF100B91B23;
+			packageReferences = (
+				94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				94ED99F2269AA11200B91B23 /* XCRemoteSwiftPackageReference "swift-nio-zlib-support" */,
+			);
 			productRefGroup = 94ED99B6269A9BF100B91B23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +277,8 @@
 			files = (
 				94ED99C8269A9BF500B91B23 /* LaunchScreen.storyboard in Resources */,
 				94ED99C5269A9BF500B91B23 /* Assets.xcassets in Resources */,
+				94ED99FE269AAD0C00B91B23 /* SearchRepositories.graphql in Resources */,
+				94ED9A01269AAEE100B91B23 /* RepositoryDetails.graphql in Resources */,
 				94ED99C0269A9BF100B91B23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +299,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		94ED99F3269AA14F00B91B23 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94ED99B1269A9BF100B91B23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,8 +326,10 @@
 			files = (
 				94ED99BD269A9BF100B91B23 /* ViewController.swift in Sources */,
 				94ED99B9269A9BF100B91B23 /* AppDelegate.swift in Sources */,
+				94ED99F7269AAAF600B91B23 /* Client.swift in Sources */,
 				94ED99C3269A9BF100B91B23 /* PeekApp.xcdatamodeld in Sources */,
 				94ED99BB269A9BF100B91B23 /* SceneDelegate.swift in Sources */,
+				94ED99F5269AAAE100B91B23 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +662,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.45.0;
+			};
+		};
+		94ED99F2269AA11200B91B23 /* XCRemoteSwiftPackageReference "swift-nio-zlib-support" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:apple/swift-nio-zlib-support.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94ED99EE269AA0ED00B91B23 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		94ED99F0269AA0ED00B91B23 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		94ED99C1269A9BF100B91B23 /* PeekApp.xcdatamodeld */ = {
