@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1858E2D385DF25E09E82EE74 /* Pods_PeekApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12256DB7BC0ED78C6E1A877 /* Pods_PeekApp.framework */; };
+		59D22B64153A41F1E2BD9E2C /* Pods_PeekApp_PeekAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56295DBA317E73ED23DE4690 /* Pods_PeekApp_PeekAppUITests.framework */; };
 		94ED99B9269A9BF100B91B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99B8269A9BF100B91B23 /* AppDelegate.swift */; };
 		94ED99BB269A9BF100B91B23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99BA269A9BF100B91B23 /* SceneDelegate.swift */; };
 		94ED99BD269A9BF100B91B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99BC269A9BF100B91B23 /* ViewController.swift */; };
@@ -16,8 +18,8 @@
 		94ED99C8269A9BF500B91B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94ED99C6269A9BF500B91B23 /* LaunchScreen.storyboard */; };
 		94ED99D3269A9BF500B91B23 /* PeekAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99D2269A9BF500B91B23 /* PeekAppTests.swift */; };
 		94ED99DE269A9BF500B91B23 /* PeekAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99DD269A9BF500B91B23 /* PeekAppUITests.swift */; };
-		94ED99EF269AA0ED00B91B23 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 94ED99EE269AA0ED00B91B23 /* Apollo */; };
-		94ED99F1269AA0ED00B91B23 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 94ED99F0269AA0ED00B91B23 /* ApolloAPI */; };
+		94ED99EF269AA0ED00B91B23 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 94ED99EE269AA0ED00B91B23 /* SwiftPackageProductDependency */; };
+		94ED99F1269AA0ED00B91B23 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 94ED99F0269AA0ED00B91B23 /* SwiftPackageProductDependency */; };
 		94ED99F5269AAAE100B91B23 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99F4269AAAE100B91B23 /* API.swift */; };
 		94ED99F7269AAAF600B91B23 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99F6269AAAF600B91B23 /* Client.swift */; };
 		94ED99FE269AAD0C00B91B23 /* SearchRepositories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 94ED99FC269AAD0C00B91B23 /* SearchRepositories.graphql */; };
@@ -35,6 +37,7 @@
 		94ED9A2B269B465C00B91B23 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A29269B465C00B91B23 /* Injection.swift */; };
 		94ED9A2E269B472500B91B23 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A2D269B472500B91B23 /* DataModule.swift */; };
 		94ED9A31269B474E00B91B23 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A30269B474E00B91B23 /* NetworkModule.swift */; };
+		9785E7B50C7B7C8F491A502B /* Pods_PeekAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D55836B96B3DCDB7DFC65 /* Pods_PeekAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EBEC123063B0D28843995E2 /* Pods-PeekAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PeekAppTests/Pods-PeekAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30A77EDA5E9B7C4E766CA88C /* Pods-PeekApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekApp.release.xcconfig"; path = "Target Support Files/Pods-PeekApp/Pods-PeekApp.release.xcconfig"; sourceTree = "<group>"; };
+		56295DBA317E73ED23DE4690 /* Pods_PeekApp_PeekAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeekApp_PeekAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		726D55836B96B3DCDB7DFC65 /* Pods_PeekAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeekAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ED99B5269A9BF100B91B23 /* PeekApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ED99B8269A9BF100B91B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94ED99BA269A9BF100B91B23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +94,11 @@
 		94ED9A29269B465C00B91B23 /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		94ED9A2D269B472500B91B23 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
 		94ED9A30269B474E00B91B23 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		9B1CCFB0E3496AACCF0F15C4 /* Pods-PeekAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekAppTests.release.xcconfig"; path = "Target Support Files/Pods-PeekAppTests/Pods-PeekAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		B648F6C98EF3AF335BC67334 /* Pods-PeekApp-PeekAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekApp-PeekAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PeekApp-PeekAppUITests/Pods-PeekApp-PeekAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D339DB5DA06BEAF91C27B296 /* Pods-PeekApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekApp.debug.xcconfig"; path = "Target Support Files/Pods-PeekApp/Pods-PeekApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D5571A7E3D317D87711F28DA /* Pods-PeekApp-PeekAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekApp-PeekAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PeekApp-PeekAppUITests/Pods-PeekApp-PeekAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F12256DB7BC0ED78C6E1A877 /* Pods_PeekApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeekApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94ED99F1269AA0ED00B91B23 /* ApolloAPI in Frameworks */,
-				94ED99EF269AA0ED00B91B23 /* Apollo in Frameworks */,
+				94ED99F1269AA0ED00B91B23 /* BuildFile in Frameworks */,
+				94ED99EF269AA0ED00B91B23 /* BuildFile in Frameworks */,
+				1858E2D385DF25E09E82EE74 /* Pods_PeekApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9785E7B50C7B7C8F491A502B /* Pods_PeekAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,12 +124,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D22B64153A41F1E2BD9E2C /* Pods_PeekApp_PeekAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		944A65C9CA0B2D76E43F7CA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D339DB5DA06BEAF91C27B296 /* Pods-PeekApp.debug.xcconfig */,
+				30A77EDA5E9B7C4E766CA88C /* Pods-PeekApp.release.xcconfig */,
+				B648F6C98EF3AF335BC67334 /* Pods-PeekApp-PeekAppUITests.debug.xcconfig */,
+				D5571A7E3D317D87711F28DA /* Pods-PeekApp-PeekAppUITests.release.xcconfig */,
+				1EBEC123063B0D28843995E2 /* Pods-PeekAppTests.debug.xcconfig */,
+				9B1CCFB0E3496AACCF0F15C4 /* Pods-PeekAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		94ED99AC269A9BF100B91B23 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +152,8 @@
 				94ED99D1269A9BF500B91B23 /* PeekAppTests */,
 				94ED99DC269A9BF500B91B23 /* PeekAppUITests */,
 				94ED99B6269A9BF100B91B23 /* Products */,
+				944A65C9CA0B2D76E43F7CA1 /* Pods */,
+				B39E3B91F57798F6D47314F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +297,16 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		B39E3B91F57798F6D47314F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F12256DB7BC0ED78C6E1A877 /* Pods_PeekApp.framework */,
+				56295DBA317E73ED23DE4690 /* Pods_PeekApp_PeekAppUITests.framework */,
+				726D55836B96B3DCDB7DFC65 /* Pods_PeekAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94ED99E2269A9BF500B91B23 /* Build configuration list for PBXNativeTarget "PeekApp" */;
 			buildPhases = (
+				33B9687EB23A941722053D8B /* [CP] Check Pods Manifest.lock */,
 				94ED99F3269AA14F00B91B23 /* ShellScript */,
 				94ED99B1269A9BF100B91B23 /* Sources */,
 				94ED99B2269A9BF100B91B23 /* Frameworks */,
@@ -284,8 +326,8 @@
 			);
 			name = PeekApp;
 			packageProductDependencies = (
-				94ED99EE269AA0ED00B91B23 /* Apollo */,
-				94ED99F0269AA0ED00B91B23 /* ApolloAPI */,
+				94ED99EE269AA0ED00B91B23 /* SwiftPackageProductDependency */,
+				94ED99F0269AA0ED00B91B23 /* SwiftPackageProductDependency */,
 			);
 			productName = PeekApp;
 			productReference = 94ED99B5269A9BF100B91B23 /* PeekApp.app */;
@@ -295,9 +337,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94ED99E5269A9BF500B91B23 /* Build configuration list for PBXNativeTarget "PeekAppTests" */;
 			buildPhases = (
+				34076B114FC501F707C63C61 /* [CP] Check Pods Manifest.lock */,
 				94ED99CA269A9BF500B91B23 /* Sources */,
 				94ED99CB269A9BF500B91B23 /* Frameworks */,
 				94ED99CC269A9BF500B91B23 /* Resources */,
+				AE665AF87E3F35CE38048198 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +357,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94ED99E8269A9BF500B91B23 /* Build configuration list for PBXNativeTarget "PeekAppUITests" */;
 			buildPhases = (
+				C52D3AA53B8C4C1AE6279338 /* [CP] Check Pods Manifest.lock */,
 				94ED99D5269A9BF500B91B23 /* Sources */,
 				94ED99D6269A9BF500B91B23 /* Frameworks */,
 				94ED99D7269A9BF500B91B23 /* Resources */,
@@ -359,8 +404,8 @@
 			);
 			mainGroup = 94ED99AC269A9BF100B91B23;
 			packageReferences = (
-				94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */,
-				94ED99F2269AA11200B91B23 /* XCRemoteSwiftPackageReference "swift-nio-zlib-support" */,
+				94ED99ED269AA0ED00B91B23 /* RemoteSwiftPackageReference */,
+				94ED99F2269AA11200B91B23 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 94ED99B6269A9BF100B91B23 /* Products */;
 			projectDirPath = "";
@@ -403,6 +448,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		33B9687EB23A941722053D8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeekApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34076B114FC501F707C63C61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeekAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		94ED99F3269AA14F00B91B23 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +508,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+		};
+		AE665AF87E3F35CE38048198 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeekAppTests/Pods-PeekAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeekAppTests/Pods-PeekAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeekAppTests/Pods-PeekAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C52D3AA53B8C4C1AE6279338 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeekApp-PeekAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -618,6 +746,7 @@
 		};
 		94ED99E3269A9BF500B91B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D339DB5DA06BEAF91C27B296 /* Pods-PeekApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -637,6 +766,7 @@
 		};
 		94ED99E4269A9BF500B91B23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A77EDA5E9B7C4E766CA88C /* Pods-PeekApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -656,6 +786,7 @@
 		};
 		94ED99E6269A9BF500B91B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBEC123063B0D28843995E2 /* Pods-PeekAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -678,6 +809,7 @@
 		};
 		94ED99E7269A9BF500B91B23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1CCFB0E3496AACCF0F15C4 /* Pods-PeekAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -700,6 +832,7 @@
 		};
 		94ED99E9269A9BF500B91B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B648F6C98EF3AF335BC67334 /* Pods-PeekApp-PeekAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -720,6 +853,7 @@
 		};
 		94ED99EA269A9BF500B91B23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5571A7E3D317D87711F28DA /* Pods-PeekApp-PeekAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -780,7 +914,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+		94ED99ED269AA0ED00B91B23 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
 			requirement = {
@@ -788,7 +922,7 @@
 				minimumVersion = 0.45.0;
 			};
 		};
-		94ED99F2269AA11200B91B23 /* XCRemoteSwiftPackageReference "swift-nio-zlib-support" */ = {
+		94ED99F2269AA11200B91B23 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:apple/swift-nio-zlib-support.git";
 			requirement = {
@@ -799,14 +933,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		94ED99EE269AA0ED00B91B23 /* Apollo */ = {
+		94ED99EE269AA0ED00B91B23 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = 94ED99ED269AA0ED00B91B23 /* RemoteSwiftPackageReference */;
 			productName = Apollo;
 		};
-		94ED99F0269AA0ED00B91B23 /* ApolloAPI */ = {
+		94ED99F0269AA0ED00B91B23 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 94ED99ED269AA0ED00B91B23 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = 94ED99ED269AA0ED00B91B23 /* RemoteSwiftPackageReference */;
 			productName = ApolloAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
