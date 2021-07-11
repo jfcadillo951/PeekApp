@@ -27,6 +27,14 @@
 		94ED9A0A269B39D600B91B23 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A09269B39D600B91B23 /* ApiResult.swift */; };
 		94ED9A0D269B39FE00B91B23 /* ApiResult+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A0C269B39FE00B91B23 /* ApiResult+Extension.swift */; };
 		94ED9A0F269B3A6500B91B23 /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A0E269B3A6500B91B23 /* Error+Extension.swift */; };
+		94ED9A24269B461A00B91B23 /* SpinLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A20269B461A00B91B23 /* SpinLock.swift */; };
+		94ED9A25269B461A00B91B23 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A21269B461A00B91B23 /* Container.swift */; };
+		94ED9A26269B461A00B91B23 /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A22269B461A00B91B23 /* DIResolver.swift */; };
+		94ED9A27269B461A00B91B23 /* DIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A23269B461A00B91B23 /* DIKey.swift */; };
+		94ED9A2A269B465C00B91B23 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A28269B465C00B91B23 /* MainModule.swift */; };
+		94ED9A2B269B465C00B91B23 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A29269B465C00B91B23 /* Injection.swift */; };
+		94ED9A2E269B472500B91B23 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A2D269B472500B91B23 /* DataModule.swift */; };
+		94ED9A31269B474E00B91B23 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A30269B474E00B91B23 /* NetworkModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +79,14 @@
 		94ED9A09269B39D600B91B23 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
 		94ED9A0C269B39FE00B91B23 /* ApiResult+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiResult+Extension.swift"; sourceTree = "<group>"; };
 		94ED9A0E269B3A6500B91B23 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
+		94ED9A20269B461A00B91B23 /* SpinLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinLock.swift; sourceTree = "<group>"; };
+		94ED9A21269B461A00B91B23 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		94ED9A22269B461A00B91B23 /* DIResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
+		94ED9A23269B461A00B91B23 /* DIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIKey.swift; sourceTree = "<group>"; };
+		94ED9A28269B465C00B91B23 /* MainModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		94ED9A29269B465C00B91B23 /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		94ED9A2D269B472500B91B23 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
+		94ED9A30269B474E00B91B23 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +176,7 @@
 		94ED99F8269AAB4A00B91B23 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				94ED9A1E269B460B00B91B23 /* DI */,
 				94ED9A0B269B39E600B91B23 /* Extension */,
 				94ED9A02269B396600B91B23 /* Data */,
 				94ED99F9269AAB5500B91B23 /* Network */,
@@ -170,6 +187,7 @@
 		94ED99F9269AAB5500B91B23 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				94ED9A2F269B474300B91B23 /* DI */,
 				94ED99F6269AAAF600B91B23 /* Client.swift */,
 			);
 			path = Network;
@@ -178,6 +196,7 @@
 		94ED9A02269B396600B91B23 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				94ED9A2C269B471100B91B23 /* DI */,
 				94ED9A08269B39C200B91B23 /* Entity */,
 				94ED9A03269B396B00B91B23 /* Repository */,
 			);
@@ -208,6 +227,43 @@
 				94ED9A0E269B3A6500B91B23 /* Error+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		94ED9A1E269B460B00B91B23 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				94ED9A29269B465C00B91B23 /* Injection.swift */,
+				94ED9A28269B465C00B91B23 /* MainModule.swift */,
+				94ED9A1F269B461A00B91B23 /* Resolver */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		94ED9A1F269B461A00B91B23 /* Resolver */ = {
+			isa = PBXGroup;
+			children = (
+				94ED9A20269B461A00B91B23 /* SpinLock.swift */,
+				94ED9A21269B461A00B91B23 /* Container.swift */,
+				94ED9A22269B461A00B91B23 /* DIResolver.swift */,
+				94ED9A23269B461A00B91B23 /* DIKey.swift */,
+			);
+			path = Resolver;
+			sourceTree = "<group>";
+		};
+		94ED9A2C269B471100B91B23 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				94ED9A2D269B472500B91B23 /* DataModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		94ED9A2F269B474300B91B23 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				94ED9A30269B474E00B91B23 /* NetworkModule.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,16 +427,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94ED9A24269B461A00B91B23 /* SpinLock.swift in Sources */,
 				94ED99BD269A9BF100B91B23 /* ViewController.swift in Sources */,
 				94ED99B9269A9BF100B91B23 /* AppDelegate.swift in Sources */,
 				94ED9A0F269B3A6500B91B23 /* Error+Extension.swift in Sources */,
 				94ED99F7269AAAF600B91B23 /* Client.swift in Sources */,
+				94ED9A2E269B472500B91B23 /* DataModule.swift in Sources */,
 				94ED9A0A269B39D600B91B23 /* ApiResult.swift in Sources */,
+				94ED9A31269B474E00B91B23 /* NetworkModule.swift in Sources */,
+				94ED9A2A269B465C00B91B23 /* MainModule.swift in Sources */,
 				94ED9A07269B398D00B91B23 /* ContentReposirotyImpl.swift in Sources */,
 				94ED99C3269A9BF100B91B23 /* PeekApp.xcdatamodeld in Sources */,
+				94ED9A27269B461A00B91B23 /* DIKey.swift in Sources */,
 				94ED99BB269A9BF100B91B23 /* SceneDelegate.swift in Sources */,
 				94ED99F5269AAAE100B91B23 /* API.swift in Sources */,
+				94ED9A25269B461A00B91B23 /* Container.swift in Sources */,
 				94ED9A05269B397D00B91B23 /* ContentRepository.swift in Sources */,
+				94ED9A26269B461A00B91B23 /* DIResolver.swift in Sources */,
+				94ED9A2B269B465C00B91B23 /* Injection.swift in Sources */,
 				94ED9A0D269B39FE00B91B23 /* ApiResult+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
