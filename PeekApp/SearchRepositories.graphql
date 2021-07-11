@@ -1,5 +1,8 @@
-query SearchRepositories($query: String!, $count: Int!) {
-    search(query: $query, type: REPOSITORY, first: $count) {
+query SearchRepositories($query: String!, $count: Int!, $token: String) {
+    search(query: $query, type: REPOSITORY, first: $count, after: $token) {
+        pageInfo {
+          endCursor
+        }
         edges {
             node {
                 ... on Repository {
