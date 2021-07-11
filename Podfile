@@ -2,19 +2,18 @@
 # platform :ios, '9.0'
 
 target 'PeekApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for PeekApp
+  pod 'RxSwift', '5.1.1'
+  pod 'RxCocoa', '5.1.1'
 
   target 'PeekAppTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxBlocking', '~> 5'
+    pod 'RxTest', '~> 5'
     pod 'Cuckoo', '~> 1.5.0'
   end
 
   target 'PeekAppUITests' do
-    # Pods for testing
   end
 
 end
