@@ -7,5 +7,4 @@ fragment RepositoryDetails on Repository {
     stargazers {
         totalCount
     }
-    url
 }

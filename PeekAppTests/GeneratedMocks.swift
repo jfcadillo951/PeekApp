@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: PeekApp/Content/Data/Repository/ContentRepository.swift at 2021-07-11 22:53:09 +0000
+// MARK: - Mocks generated from file: PeekApp/Content/Data/Repository/ContentRepository.swift at 2021-07-11 23:42:41 +0000
 
 //
 //  ContentRepository.swift
@@ -103,7 +103,7 @@ import Foundation
 }
 
 
-// MARK: - Mocks generated from file: PeekApp/Content/Presentation/Mapper/ContentPresentationMapper.swift at 2021-07-11 22:53:09 +0000
+// MARK: - Mocks generated from file: PeekApp/Content/Presentation/Mapper/ContentPresentationMapper.swift at 2021-07-11 23:42:41 +0000
 
 //
 //  ContentPresentationMapper.swift
