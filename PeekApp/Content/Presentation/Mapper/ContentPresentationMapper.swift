@@ -8,5 +8,8 @@
 import Foundation
 
 protocol ContentPresentationMapper {
-    func map(_ value: SearchRepositoriesQuery.Data.Search) -> UiRepositoryArgs
+    func map(
+        _ value: SearchRepositoriesQuery.Data.Search,
+        pullToRefresh: Bool
+    ) -> UiRepositoryArgs
 }

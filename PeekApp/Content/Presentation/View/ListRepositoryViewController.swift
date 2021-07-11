@@ -15,6 +15,9 @@ final class ListRepositoryViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var items: [UiRepositoryItem] = []
     private var hasNext = true
+    private lazy var refreshControl: UIRefreshControl = {
+        .init()
+    }()
     init(viewModel: ListRepositoryViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: Bundle.main)
@@ -33,6 +36,8 @@ final class ListRepositoryViewController: UIViewController {
 
 private extension ListRepositoryViewController {
     func setupUI() {
+        refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
         tableView.register(RepositoryTableViewCell.self)
         tableView.register(LoadingTableViewCell.self)
         tableView.delegate = self
@@ -41,10 +46,31 @@ private extension ListRepositoryViewController {
     }
     func bindViewModel() {
         viewModel.nextArgsObserver.subscribe(onNext: { [weak self] value in
-            self?.addElements(args: value)
+            if value.refreshData {
+                self?.reload(args: value)
+            } else {
+                self?.addElements(args: value)
+            }
+        }).disposed(by: disposeBag)
+        viewModel.errorObserver.subscribe(onNext: { [weak self] value in
+            DispatchQueue.main.async {
+                self?.showAlert(message: value)
+            }
         }).disposed(by: disposeBag)
     }
 
+    @objc func onRefresh(_ sender: Any) {
+        viewModel.onPullToRefresh()
+    }
+
+    func reload(args: UiRepositoryArgs) {
+        self.items = args.items
+        self.hasNext = args.hasNext
+        DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
+            self.tableView.reloadData()
+        }
+    }
     func addElements(args: UiRepositoryArgs) {
         var insertIndexPaths: [IndexPath] = []
         let count = items.count

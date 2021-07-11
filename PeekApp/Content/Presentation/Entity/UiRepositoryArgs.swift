@@ -10,4 +10,5 @@ import Foundation
 struct UiRepositoryArgs: Equatable {
     let items: [UiRepositoryItem]
     let hasNext: Bool
+    let refreshData: Bool
 }

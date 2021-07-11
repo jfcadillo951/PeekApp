@@ -27,23 +27,28 @@ final class ListRepositoryViewModel {
         nextArgsSubject.asObservable()
     }
 
-    private var currentToken: String?
-
-    func onViewDidLoad() {
-        callData()
+    private let errorSubject = PublishSubject<String>()
+    var errorObserver: Observable<String> {
+        errorSubject.asObservable()
     }
 
+    private var currentToken: String?
     private var isCalling = false
     func onLoadNext(hasNext: Bool) {
         if hasNext {
-            callData()
+            callData(pullToRefresh: false)
         }
+    }
+
+    func onPullToRefresh() {
+        currentToken = nil
+        callData(pullToRefresh: true)
     }
 }
 
 
 private extension ListRepositoryViewModel {
-    func callData() {
+    func callData(pullToRefresh: Bool) {
         if isCalling {
             return
         }
@@ -57,10 +62,11 @@ private extension ListRepositoryViewModel {
             self.isCalling = false
             switch value {
             case .success(let data):
-                self.nextArgsSubject.onNext(self.mapper.map(data))
                 self.currentToken = data.pageInfo.endCursor
+                self.nextArgsSubject.onNext(
+                    self.mapper.map(data, pullToRefresh: pullToRefresh))
             case .error(_):
-                break
+                self.errorSubject.onNext("Something where wrong, please try it again later")
             }
         }
     }

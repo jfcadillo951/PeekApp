@@ -8,12 +8,16 @@
 import Foundation
 
 final class ContentPresentationMapperImpl: ContentPresentationMapper {
-    func map(_ value: SearchRepositoriesQuery.Data.Search) -> UiRepositoryArgs {
+    func map(
+        _ value: SearchRepositoriesQuery.Data.Search,
+        pullToRefresh: Bool
+    ) -> UiRepositoryArgs {
         .init(
             items: value.edges?.map({ item in
                 map(item)
             }) ?? [],
-            hasNext: value.pageInfo.hasNextPage)
+            hasNext: value.pageInfo.hasNextPage,
+            refreshData: pullToRefresh)
     }
 }
 
