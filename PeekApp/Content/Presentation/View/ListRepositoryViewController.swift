@@ -54,6 +54,7 @@ private extension ListRepositoryViewController {
         }).disposed(by: disposeBag)
         viewModel.errorObserver.subscribe(onNext: { [weak self] value in
             DispatchQueue.main.async {
+                self?.refreshControl.endRefreshing()
                 self?.showAlert(message: value)
             }
         }).disposed(by: disposeBag)

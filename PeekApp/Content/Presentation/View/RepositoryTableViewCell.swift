@@ -16,6 +16,7 @@ final class RepositoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
         cleanCell()
     }
 
@@ -40,6 +41,9 @@ final class RepositoryTableViewCell: UITableViewCell {
 }
 
 private extension RepositoryTableViewCell {
+    func setupUI() {
+        self.selectionStyle = .none
+    }
     func cleanCell() {
         iconImageView.image = nil
         nameLabel.text = ""

@@ -19,7 +19,7 @@ class LoadingTableViewCell: UITableViewCell {
     var hasNext: Bool = false{
         didSet {
             activityIndicator.isHidden = !hasNext
-            setupUI()
+            activityIndicator.startAnimating()
         }
     }
 }
@@ -27,6 +27,6 @@ class LoadingTableViewCell: UITableViewCell {
 private extension LoadingTableViewCell {
     func setupUI() {
         activityIndicator.startAnimating()
-        
+        self.selectionStyle = .none
     }
 }
