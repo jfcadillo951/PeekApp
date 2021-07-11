@@ -34,7 +34,9 @@ final class ListRepositoryViewModel {
     }
 
     func onNextPage() {
-        callData()
+        if currentToken != nil {
+            callData()
+        }
     }
 }
 

@@ -34,6 +34,7 @@ final class ListRepositoryViewController: UIViewController {
 
 private extension ListRepositoryViewController {
     func setupUI() {
+        tableView.register(RepositoryTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
     }

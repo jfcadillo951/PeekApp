@@ -44,6 +44,10 @@
 		94ED9A46269B54A000B91B23 /* ContentPresentationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A45269B54A000B91B23 /* ContentPresentationMapper.swift */; };
 		94ED9A48269B5EFA00B91B23 /* ContentPresentationMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A47269B5EFA00B91B23 /* ContentPresentationMapperImpl.swift */; };
 		94ED9A4A269B61AD00B91B23 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A49269B61AD00B91B23 /* String+Extension.swift */; };
+		94ED9A4D269B68DF00B91B23 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A4C269B68DF00B91B23 /* UITableView+Extension.swift */; };
+		94ED9A4F269B690500B91B23 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A4E269B690500B91B23 /* Reusable.swift */; };
+		94ED9A52269B6AD000B91B23 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED9A50269B6ACF00B91B23 /* RepositoryTableViewCell.swift */; };
+		94ED9A53269B6AD000B91B23 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94ED9A51269B6AD000B91B23 /* RepositoryTableViewCell.xib */; };
 		9785E7B50C7B7C8F491A502B /* Pods_PeekAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D55836B96B3DCDB7DFC65 /* Pods_PeekAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +112,10 @@
 		94ED9A45269B54A000B91B23 /* ContentPresentationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPresentationMapper.swift; sourceTree = "<group>"; };
 		94ED9A47269B5EFA00B91B23 /* ContentPresentationMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPresentationMapperImpl.swift; sourceTree = "<group>"; };
 		94ED9A49269B61AD00B91B23 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		94ED9A4C269B68DF00B91B23 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		94ED9A4E269B690500B91B23 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		94ED9A50269B6ACF00B91B23 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		94ED9A51269B6AD000B91B23 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		9B1CCFB0E3496AACCF0F15C4 /* Pods-PeekAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekAppTests.release.xcconfig"; path = "Target Support Files/Pods-PeekAppTests/Pods-PeekAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B648F6C98EF3AF335BC67334 /* Pods-PeekApp-PeekAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekApp-PeekAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PeekApp-PeekAppUITests/Pods-PeekApp-PeekAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D339DB5DA06BEAF91C27B296 /* Pods-PeekApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekApp.debug.xcconfig"; path = "Target Support Files/Pods-PeekApp/Pods-PeekApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +276,8 @@
 				94ED9A0C269B39FE00B91B23 /* ApiResult+Extension.swift */,
 				94ED9A0E269B3A6500B91B23 /* Error+Extension.swift */,
 				94ED9A49269B61AD00B91B23 /* String+Extension.swift */,
+				94ED9A4C269B68DF00B91B23 /* UITableView+Extension.swift */,
+				94ED9A4E269B690500B91B23 /* Reusable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -327,6 +337,8 @@
 			children = (
 				94ED9A36269B4FA400B91B23 /* ListRepositoryViewController.swift */,
 				94ED9A37269B4FA400B91B23 /* ListRepositoryViewController.xib */,
+				94ED9A50269B6ACF00B91B23 /* RepositoryTableViewCell.swift */,
+				94ED9A51269B6AD000B91B23 /* RepositoryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -503,6 +515,7 @@
 			files = (
 				94ED9A39269B4FA400B91B23 /* ListRepositoryViewController.xib in Resources */,
 				94ED99C8269A9BF500B91B23 /* LaunchScreen.storyboard in Resources */,
+				94ED9A53269B6AD000B91B23 /* RepositoryTableViewCell.xib in Resources */,
 				94ED99C5269A9BF500B91B23 /* Assets.xcassets in Resources */,
 				94ED99FE269AAD0C00B91B23 /* SearchRepositories.graphql in Resources */,
 				94ED9A01269AAEE100B91B23 /* RepositoryDetails.graphql in Resources */,
@@ -680,6 +693,7 @@
 				94ED9A43269B53D000B91B23 /* UiRepositoryArgs.swift in Sources */,
 				94ED9A2A269B465C00B91B23 /* MainModule.swift in Sources */,
 				94ED9A07269B398D00B91B23 /* ContentReposirotyImpl.swift in Sources */,
+				94ED9A4F269B690500B91B23 /* Reusable.swift in Sources */,
 				94ED99C3269A9BF100B91B23 /* PeekApp.xcdatamodeld in Sources */,
 				94ED9A27269B461A00B91B23 /* DIKey.swift in Sources */,
 				94ED99F5269AAAE100B91B23 /* API.swift in Sources */,
@@ -689,6 +703,8 @@
 				94ED9A48269B5EFA00B91B23 /* ContentPresentationMapperImpl.swift in Sources */,
 				94ED9A26269B461A00B91B23 /* DIResolver.swift in Sources */,
 				94ED9A2B269B465C00B91B23 /* Injection.swift in Sources */,
+				94ED9A4D269B68DF00B91B23 /* UITableView+Extension.swift in Sources */,
+				94ED9A52269B6AD000B91B23 /* RepositoryTableViewCell.swift in Sources */,
 				94ED9A0D269B39FE00B91B23 /* ApiResult+Extension.swift in Sources */,
 				94ED9A41269B537100B91B23 /* UiRepositoryItem.swift in Sources */,
 				94ED9A46269B54A000B91B23 /* ContentPresentationMapper.swift in Sources */,
