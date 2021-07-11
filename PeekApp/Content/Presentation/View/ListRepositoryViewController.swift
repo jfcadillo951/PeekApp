@@ -46,18 +46,24 @@ private extension ListRepositoryViewController {
     }
 
     func addElements(args: UiRepositoryArgs) {
-        var indexPaths: [IndexPath] = []
+        var insertIndexPaths: [IndexPath] = []
         let count = items.count
         for (i,_) in args.items.enumerated() {
-            indexPaths.append(.init(row: count + i, section: 0))
+            insertIndexPaths.append(.init(row: count + i, section: 0))
         }
-//        if args.hasNext != hasNext {
-//            indexPaths.append(.init(row: count + indexPaths.count, section: 0))
-//        }
+        var reloadIndexPaths: [IndexPath] = []
+        if args.hasNext != hasNext {
+            reloadIndexPaths.append(.init(row: count + insertIndexPaths.count, section: 0))
+        }
         self.items.append(contentsOf: args.items)
         self.hasNext = args.hasNext
         DispatchQueue.main.async {
-            self.tableView.insertRows(at: indexPaths, with: .automatic)
+            self.tableView.performBatchUpdates {
+                self.tableView.insertRows(at: insertIndexPaths, with: .automatic)
+            } completion: { _ in
+                self.tableView.reloadRows(at: reloadIndexPaths, with: .automatic)
+            }
+            
         }
     }
 }
@@ -65,7 +71,7 @@ private extension ListRepositoryViewController {
 extension ListRepositoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if cell as? LoadingTableViewCell != nil {
-            viewModel.onNextPage(hasNext: hasNext)
+            viewModel.onLoadNext(hasNext: hasNext)
         }
     }
 }
@@ -85,6 +91,7 @@ extension ListRepositoryViewController: UITableViewDataSource {
             if let cell = tableView.dequeueReusableCell(
                 withIdentifier: RepositoryTableViewCell.identifier,
                 for: indexPath) as? RepositoryTableViewCell {
+                cell.item = items[indexPath.row]
                 return cell
             }
         } else {

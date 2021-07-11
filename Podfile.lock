@@ -12,6 +12,9 @@ PODS:
   - RxSwift (5.1.1)
   - RxTest (5.1.2):
     - RxSwift (~> 5)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
 
 DEPENDENCIES:
   - Cuckoo (~> 1.5.0)
@@ -19,6 +22,7 @@ DEPENDENCIES:
   - RxCocoa (= 5.1.1)
   - RxSwift (= 5.1.1)
   - RxTest (~> 5)
+  - SDWebImage (= 5.10.4)
 
 SPEC REPOS:
   trunk:
@@ -28,6 +32,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Cuckoo: 9124fe138270854903483c270370e6e7658fbc9b
@@ -36,7 +41,8 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 274549b747dca56f47c52c8991ec5cf797ecfe40
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
 
-PODFILE CHECKSUM: bb5db5de97d2489a70446c73938eab3a0f65d082
+PODFILE CHECKSUM: 8a0639289f978a9beafda24067cc01bf5ee8dbe5
 
 COCOAPODS: 1.10.1

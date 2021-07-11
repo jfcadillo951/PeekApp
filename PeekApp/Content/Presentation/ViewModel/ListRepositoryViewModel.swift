@@ -19,7 +19,7 @@ final class ListRepositoryViewModel {
 
     private enum Constants {
         static let query = "graphql"
-        static let page = 20
+        static let page = 50
     }
 
     private let nextArgsSubject = PublishSubject<UiRepositoryArgs>()
@@ -34,7 +34,7 @@ final class ListRepositoryViewModel {
     }
 
     private var isCalling = false
-    func onNextPage(hasNext: Bool) {
+    func onLoadNext(hasNext: Bool) {
         if hasNext {
             callData()
         }

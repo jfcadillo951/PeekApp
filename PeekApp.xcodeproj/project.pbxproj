@@ -12,6 +12,7 @@
 		949D9AC0269B73B80047B195 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9ABE269B73B80047B195 /* LoadingTableViewCell.swift */; };
 		949D9AC1269B73B80047B195 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949D9ABF269B73B80047B195 /* LoadingTableViewCell.xib */; };
 		949D9AC3269B79ED0047B195 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9AC2269B79ED0047B195 /* ApiError.swift */; };
+		949D9AC5269BA02A0047B195 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9AC4269BA02A0047B195 /* UIImageView+Extension.swift */; };
 		94ED99B9269A9BF100B91B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99B8269A9BF100B91B23 /* AppDelegate.swift */; };
 		94ED99BD269A9BF100B91B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99BC269A9BF100B91B23 /* ViewController.swift */; };
 		94ED99C0269A9BF100B91B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94ED99BE269A9BF100B91B23 /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 		949D9ABE269B73B80047B195 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		949D9ABF269B73B80047B195 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		949D9AC2269B79ED0047B195 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		949D9AC4269BA02A0047B195 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		94ED99B5269A9BF100B91B23 /* PeekApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ED99B8269A9BF100B91B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94ED99BC269A9BF100B91B23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				94ED9A49269B61AD00B91B23 /* String+Extension.swift */,
 				94ED9A4C269B68DF00B91B23 /* UITableView+Extension.swift */,
 				94ED9A4E269B690500B91B23 /* Reusable.swift */,
+				949D9AC4269BA02A0047B195 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				94ED9A26269B461A00B91B23 /* DIResolver.swift in Sources */,
 				94ED9A2B269B465C00B91B23 /* Injection.swift in Sources */,
 				94ED9A4D269B68DF00B91B23 /* UITableView+Extension.swift in Sources */,
+				949D9AC5269BA02A0047B195 /* UIImageView+Extension.swift in Sources */,
 				949D9AC3269B79ED0047B195 /* ApiError.swift in Sources */,
 				949D9AC0269B73B80047B195 /* LoadingTableViewCell.swift in Sources */,
 				94ED9A52269B6AD000B91B23 /* RepositoryTableViewCell.swift in Sources */,

@@ -13,16 +13,28 @@ final class ContentPresentationMapperImpl: ContentPresentationMapper {
             items: value.edges?.map({ item in
                 map(item)
             }) ?? [],
-            hasNext: value.pageInfo.endCursor != nil)
+            hasNext: value.pageInfo.hasNextPage)
     }
 }
 
 private extension ContentPresentationMapperImpl {
     func map(_ value: SearchRepositoriesQuery.Data.Search.Edge?) -> UiRepositoryItem {
-        .init(
-            name: value?.node?.asRepository?.fragments.repositoryDetails.name ?? "",
-            ownerName: "",
-            ownerAvater: "",
-            numberOfStars: "")
+        var name = ""
+        if let value = value?.node?.asRepository?.fragments.repositoryDetails.name {
+            name = "Name: \(value)"
+        }
+        var owner = ""
+        if let value = value?.node?.asRepository?.fragments.repositoryDetails.owner.login {
+            owner = "Owner: \(value)"
+        }
+        var stars = ""
+        if let value = value?.node?.asRepository?.fragments.repositoryDetails.stargazers.totalCount {
+            stars = "\(value) Stars"
+        }
+        return .init(
+            name: name,
+            ownerName: owner,
+            ownerAvater: value?.node?.asRepository?.fragments.repositoryDetails.owner.avatarUrl ?? "",
+            numberOfStars: stars)
     }
 }

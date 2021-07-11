@@ -1,7 +1,8 @@
 fragment RepositoryDetails on Repository {
     name
     owner {
-        resourcePath
+        login
+        avatarUrl
     }
     stargazers {
         totalCount

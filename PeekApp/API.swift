@@ -14,6 +14,7 @@ public final class SearchRepositoriesQuery: GraphQLQuery {
         pageInfo {
           __typename
           endCursor
+          hasNextPage
         }
         edges {
           __typename
@@ -136,6 +137,7 @@ public final class SearchRepositoriesQuery: GraphQLQuery {
           return [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("endCursor", type: .scalar(String.self)),
+            GraphQLField("hasNextPage", type: .nonNull(.scalar(Bool.self))),
           ]
         }
 
@@ -145,8 +147,8 @@ public final class SearchRepositoriesQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(endCursor: String? = nil) {
-          self.init(unsafeResultMap: ["__typename": "PageInfo", "endCursor": endCursor])
+        public init(endCursor: String? = nil, hasNextPage: Bool) {
+          self.init(unsafeResultMap: ["__typename": "PageInfo", "endCursor": endCursor, "hasNextPage": hasNextPage])
         }
 
         public var __typename: String {
@@ -165,6 +167,16 @@ public final class SearchRepositoriesQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "endCursor")
+          }
+        }
+
+        /// When paginating forwards, are there more items?
+        public var hasNextPage: Bool {
+          get {
+            return resultMap["hasNextPage"]! as! Bool
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "hasNextPage")
           }
         }
       }
@@ -338,7 +350,8 @@ public struct RepositoryDetails: GraphQLFragment {
       name
       owner {
         __typename
-        resourcePath
+        login
+        avatarUrl
       }
       stargazers {
         __typename
@@ -425,7 +438,8 @@ public struct RepositoryDetails: GraphQLFragment {
     public static var selections: [GraphQLSelection] {
       return [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("resourcePath", type: .nonNull(.scalar(String.self))),
+        GraphQLField("login", type: .nonNull(.scalar(String.self))),
+        GraphQLField("avatarUrl", type: .nonNull(.scalar(String.self))),
       ]
     }
 
@@ -435,12 +449,12 @@ public struct RepositoryDetails: GraphQLFragment {
       self.resultMap = unsafeResultMap
     }
 
-    public static func makeOrganization(resourcePath: String) -> Owner {
-      return Owner(unsafeResultMap: ["__typename": "Organization", "resourcePath": resourcePath])
+    public static func makeOrganization(login: String, avatarUrl: String) -> Owner {
+      return Owner(unsafeResultMap: ["__typename": "Organization", "login": login, "avatarUrl": avatarUrl])
     }
 
-    public static func makeUser(resourcePath: String) -> Owner {
-      return Owner(unsafeResultMap: ["__typename": "User", "resourcePath": resourcePath])
+    public static func makeUser(login: String, avatarUrl: String) -> Owner {
+      return Owner(unsafeResultMap: ["__typename": "User", "login": login, "avatarUrl": avatarUrl])
     }
 
     public var __typename: String {
@@ -452,13 +466,23 @@ public struct RepositoryDetails: GraphQLFragment {
       }
     }
 
-    /// The HTTP URL for the owner.
-    public var resourcePath: String {
+    /// The username used to login.
+    public var login: String {
       get {
-        return resultMap["resourcePath"]! as! String
+        return resultMap["login"]! as! String
       }
       set {
-        resultMap.updateValue(newValue, forKey: "resourcePath")
+        resultMap.updateValue(newValue, forKey: "login")
+      }
+    }
+
+    /// A URL pointing to the owner's public avatar.
+    public var avatarUrl: String {
+      get {
+        return resultMap["avatarUrl"]! as! String
+      }
+      set {
+        resultMap.updateValue(newValue, forKey: "avatarUrl")
       }
     }
   }

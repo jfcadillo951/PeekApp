@@ -10,7 +10,7 @@ import Apollo
 
 final class Client {
     static let shared = Client()
-    private let token = "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"
+    private let token = "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"
     private let url = "https://api.github.com/graphql"
     lazy var apollo: ApolloClient = {
         let cache = InMemoryNormalizedCache()

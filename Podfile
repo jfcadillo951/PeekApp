@@ -5,6 +5,7 @@ target 'PeekApp' do
   use_frameworks!
   pod 'RxSwift', '5.1.1'
   pod 'RxCocoa', '5.1.1'
+  pod 'SDWebImage', '5.10.4'
 
   target 'PeekAppTests' do
     inherit! :search_paths
