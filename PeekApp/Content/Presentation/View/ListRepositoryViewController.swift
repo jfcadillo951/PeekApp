@@ -14,7 +14,7 @@ final class ListRepositoryViewController: UIViewController {
     private let viewModel: ListRepositoryViewModel
     private let disposeBag = DisposeBag()
     private var items: [UiRepositoryItem] = []
-    private let hasNext = false
+    private var hasNext = true
     init(viewModel: ListRepositoryViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: Bundle.main)
@@ -28,15 +28,16 @@ final class ListRepositoryViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         bindViewModel()
-        viewModel.onViewDidLoad()
     }
 }
 
 private extension ListRepositoryViewController {
     func setupUI() {
         tableView.register(RepositoryTableViewCell.self)
+        tableView.register(LoadingTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.reloadData()
     }
     func bindViewModel() {
         viewModel.nextArgsObserver.subscribe(onNext: { [weak self] value in
@@ -50,26 +51,50 @@ private extension ListRepositoryViewController {
         for (i,_) in args.items.enumerated() {
             indexPaths.append(.init(row: count + i, section: 0))
         }
-        if args.hasNext != hasNext {
-            indexPaths.append(.init(row: count + indexPaths.count, section: 0))
-        }
+//        if args.hasNext != hasNext {
+//            indexPaths.append(.init(row: count + indexPaths.count, section: 0))
+//        }
+        self.items.append(contentsOf: args.items)
+        self.hasNext = args.hasNext
         DispatchQueue.main.async {
-            self.tableView.reloadRows(at: indexPaths, with: .automatic)
+            self.tableView.insertRows(at: indexPaths, with: .automatic)
         }
     }
 }
 
 extension ListRepositoryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if cell as? LoadingTableViewCell != nil {
+            viewModel.onNextPage(hasNext: hasNext)
+        }
+    }
 }
 
 extension ListRepositoryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        70
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+        items.count + 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        .init()
+        if indexPath.row < items.count {
+            if let cell = tableView.dequeueReusableCell(
+                withIdentifier: RepositoryTableViewCell.identifier,
+                for: indexPath) as? RepositoryTableViewCell {
+                return cell
+            }
+        } else {
+            if let cell = tableView.dequeueReusableCell(
+                withIdentifier: LoadingTableViewCell.identifier,
+                for: indexPath) as? LoadingTableViewCell {
+                cell.hasNext = hasNext
+                return cell
+            }
+        }
+        return .init()
     }
 }

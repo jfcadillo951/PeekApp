@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1858E2D385DF25E09E82EE74 /* Pods_PeekApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12256DB7BC0ED78C6E1A877 /* Pods_PeekApp.framework */; };
 		59D22B64153A41F1E2BD9E2C /* Pods_PeekApp_PeekAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56295DBA317E73ED23DE4690 /* Pods_PeekApp_PeekAppUITests.framework */; };
+		949D9AC0269B73B80047B195 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9ABE269B73B80047B195 /* LoadingTableViewCell.swift */; };
+		949D9AC1269B73B80047B195 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949D9ABF269B73B80047B195 /* LoadingTableViewCell.xib */; };
+		949D9AC3269B79ED0047B195 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949D9AC2269B79ED0047B195 /* ApiError.swift */; };
 		94ED99B9269A9BF100B91B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99B8269A9BF100B91B23 /* AppDelegate.swift */; };
 		94ED99BD269A9BF100B91B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED99BC269A9BF100B91B23 /* ViewController.swift */; };
 		94ED99C0269A9BF100B91B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94ED99BE269A9BF100B91B23 /* Main.storyboard */; };
@@ -73,6 +76,9 @@
 		30A77EDA5E9B7C4E766CA88C /* Pods-PeekApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeekApp.release.xcconfig"; path = "Target Support Files/Pods-PeekApp/Pods-PeekApp.release.xcconfig"; sourceTree = "<group>"; };
 		56295DBA317E73ED23DE4690 /* Pods_PeekApp_PeekAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeekApp_PeekAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		726D55836B96B3DCDB7DFC65 /* Pods_PeekAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeekAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		949D9ABE269B73B80047B195 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		949D9ABF269B73B80047B195 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
+		949D9AC2269B79ED0047B195 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		94ED99B5269A9BF100B91B23 /* PeekApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94ED99B8269A9BF100B91B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94ED99BC269A9BF100B91B23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				94ED9A09269B39D600B91B23 /* ApiResult.swift */,
+				949D9AC2269B79ED0047B195 /* ApiError.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -339,6 +346,8 @@
 				94ED9A37269B4FA400B91B23 /* ListRepositoryViewController.xib */,
 				94ED9A50269B6ACF00B91B23 /* RepositoryTableViewCell.swift */,
 				94ED9A51269B6AD000B91B23 /* RepositoryTableViewCell.xib */,
+				949D9ABE269B73B80047B195 /* LoadingTableViewCell.swift */,
+				949D9ABF269B73B80047B195 /* LoadingTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,6 +524,7 @@
 			files = (
 				94ED9A39269B4FA400B91B23 /* ListRepositoryViewController.xib in Resources */,
 				94ED99C8269A9BF500B91B23 /* LaunchScreen.storyboard in Resources */,
+				949D9AC1269B73B80047B195 /* LoadingTableViewCell.xib in Resources */,
 				94ED9A53269B6AD000B91B23 /* RepositoryTableViewCell.xib in Resources */,
 				94ED99C5269A9BF500B91B23 /* Assets.xcassets in Resources */,
 				94ED99FE269AAD0C00B91B23 /* SearchRepositories.graphql in Resources */,
@@ -704,6 +714,8 @@
 				94ED9A26269B461A00B91B23 /* DIResolver.swift in Sources */,
 				94ED9A2B269B465C00B91B23 /* Injection.swift in Sources */,
 				94ED9A4D269B68DF00B91B23 /* UITableView+Extension.swift in Sources */,
+				949D9AC3269B79ED0047B195 /* ApiError.swift in Sources */,
+				949D9AC0269B73B80047B195 /* LoadingTableViewCell.swift in Sources */,
 				94ED9A52269B6AD000B91B23 /* RepositoryTableViewCell.swift in Sources */,
 				94ED9A0D269B39FE00B91B23 /* ApiResult+Extension.swift in Sources */,
 				94ED9A41269B537100B91B23 /* UiRepositoryItem.swift in Sources */,

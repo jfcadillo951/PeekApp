@@ -22,7 +22,16 @@ final class ContentRepositoryImpl: ContentRepository {
             count: total,
             token: nextToken)
         client.apollo.fetch(query: apolloQuery) { value in
-            debugPrint(value)
+            switch value {
+            case .success(let response):
+                guard let data = response.data?.search else {
+                    onCompletion(.error(error: ApiError.noElementsFound))
+                    return
+                }
+                onCompletion(.success(data: data))
+            case .failure(let error):
+                onCompletion(.error(error: error))
+            }
         }
     }
 }

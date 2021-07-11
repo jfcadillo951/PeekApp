@@ -33,8 +33,9 @@ final class ListRepositoryViewModel {
         callData()
     }
 
-    func onNextPage() {
-        if currentToken != nil {
+    private var isCalling = false
+    func onNextPage(hasNext: Bool) {
+        if hasNext {
             callData()
         }
     }
@@ -43,11 +44,17 @@ final class ListRepositoryViewModel {
 
 private extension ListRepositoryViewModel {
     func callData() {
+        if isCalling {
+            return
+        }
+        isCalling = true
         repository.searchRepositories(
             query: Constants.query,
             total: Constants.page,
             nextToken: currentToken
-        ) { value in
+        ) { [weak self] value in
+            guard let self = self else {return}
+            self.isCalling = false
             switch value {
             case .success(let data):
                 self.nextArgsSubject.onNext(self.mapper.map(data))
