@@ -18,12 +18,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions
             launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        let queryString = "GraphQL"
-        Client.shared.apollo.fetch(
-            query: SearchRepositoriesQuery(query: queryString, count: 10)
-        ) { value in
-            debugPrint(value)
-        }
         window = .init(frame: UIScreen.main.bounds)
         window?.rootViewController = Injection.shared.getNavigationController()
         window?.makeKeyAndVisible()

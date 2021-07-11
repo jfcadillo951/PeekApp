@@ -15,8 +15,17 @@ final class ContentModule {
     }
 
     func inject() {
-        container.register(ListRepositoryViewModel.self) { _ in
-            .init()
+        container.register(ContentRepository.self) { resolver in
+            ContentRepositoryImpl(client: resolver.resolve(Client.self))
+        }
+        container.register(ContentPresentationMapper.self) { _ in
+            ContentPresentationMapperImpl()
+        }
+        container.register(ListRepositoryViewModel.self) { resolver in
+            .init(
+                repository: resolver.resolve(ContentRepository.self),
+                mapper: resolver.resolve(ContentPresentationMapper.self)
+            )
         }
         container.register(ListRepositoryViewController.self) { resolver in
             .init(viewModel: resolver.resolve(ListRepositoryViewModel.self))

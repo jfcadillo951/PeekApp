@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListRepositoryViewController" customModule="PeekApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="2rI-xN-Arp" id="841-an-LHu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
