@@ -23,6 +23,7 @@ final class Injection {
     private func injectDependencies() {
         NetworkModule(container).inject()
         DataModule(container).inject()
+        ContentModule(container).inject()
         mainModule.inject()
     }
 

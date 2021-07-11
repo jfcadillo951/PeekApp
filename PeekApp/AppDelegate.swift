@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ) { value in
             debugPrint(value)
         }
+        
         return true
     }
 

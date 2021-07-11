@@ -17,7 +17,9 @@ final class MainModule {
 
     func inject() {
         container.register(UINavigationController.self) { resolver in
-            UINavigationController(rootViewController: resolver.resolve(UIViewController.self))
+            UINavigationController(
+                rootViewController: resolver.resolve(ListRepositoryViewController.self)
+            )
         }
     }
 
