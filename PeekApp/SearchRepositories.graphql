@@ -2,6 +2,7 @@ query SearchRepositories($query: String!, $count: Int!, $token: String) {
     search(query: $query, type: REPOSITORY, first: $count, after: $token) {
         pageInfo {
           endCursor
+          hasNextPage
         }
         edges {
             node {
