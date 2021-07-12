@@ -36,6 +36,7 @@ final class ListRepositoryViewController: UIViewController {
 
 private extension ListRepositoryViewController {
     func setupUI() {
+        navigationItem.title = "List of Repositories"
         refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
         tableView.register(RepositoryTableViewCell.self)
