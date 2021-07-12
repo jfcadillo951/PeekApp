@@ -2,6 +2,8 @@
 
 Peek Asssessment Test.
 
+![Screenshot](screenshot.png)
+
 ## App Architecture:
 MVVM Architecture + Repository 
 
