@@ -45,18 +45,3 @@ enum CoreDataFactory {
         return try! .init(jsonObject: json)
     }
 }
-
-
-//extension SearchRepositoriesQuery.Data.Search {
-//    static func make() -> Self {
-//        .init(pageInfo: <#T##PageInfo#>, edges: [
-//            .init(node: Edge.Node?)
-//        ])
-//    }
-//}
-//
-//extension SearchRepositoriesQuery.Data.Search.Edge.Node {
-//    init() {
-//        self.asRepository = .selections.
-//    }
-//}

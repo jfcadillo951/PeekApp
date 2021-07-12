@@ -10,7 +10,7 @@ import XCTest
 
 final class ContentPresentationMapperImplTests: XCTestCase {
 
-    var mapper: ContentPresentationMapperImpl!
+    private var mapper: ContentPresentationMapperImpl!
 
     override func setUpWithError() throws {
         mapper = .init()
