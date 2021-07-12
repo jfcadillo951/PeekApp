@@ -5,7 +5,8 @@ Peek Asssessment Test.
 ![Screenshot](screenshot.png)
 
 ## App Architecture:
-MVVM Architecture + Repository 
+- MVVM Architecture + Repository 
+- Use of Dependency Injection resolvers
 
 ## Dependencies of the project:
 Pods:
