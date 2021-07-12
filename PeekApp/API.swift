@@ -357,7 +357,6 @@ public struct RepositoryDetails: GraphQLFragment {
         __typename
         totalCount
       }
-      url
     }
     """
 
@@ -369,7 +368,6 @@ public struct RepositoryDetails: GraphQLFragment {
       GraphQLField("name", type: .nonNull(.scalar(String.self))),
       GraphQLField("owner", type: .nonNull(.object(Owner.selections))),
       GraphQLField("stargazers", type: .nonNull(.object(Stargazer.selections))),
-      GraphQLField("url", type: .nonNull(.scalar(String.self))),
     ]
   }
 
@@ -379,8 +377,8 @@ public struct RepositoryDetails: GraphQLFragment {
     self.resultMap = unsafeResultMap
   }
 
-  public init(name: String, owner: Owner, stargazers: Stargazer, url: String) {
-    self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "owner": owner.resultMap, "stargazers": stargazers.resultMap, "url": url])
+  public init(name: String, owner: Owner, stargazers: Stargazer) {
+    self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "owner": owner.resultMap, "stargazers": stargazers.resultMap])
   }
 
   public var __typename: String {
@@ -419,16 +417,6 @@ public struct RepositoryDetails: GraphQLFragment {
     }
     set {
       resultMap.updateValue(newValue.resultMap, forKey: "stargazers")
-    }
-  }
-
-  /// The HTTP URL for this repository
-  public var url: String {
-    get {
-      return resultMap["url"]! as! String
-    }
-    set {
-      resultMap.updateValue(newValue, forKey: "url")
     }
   }
 

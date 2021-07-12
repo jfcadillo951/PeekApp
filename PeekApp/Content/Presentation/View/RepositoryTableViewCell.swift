@@ -33,7 +33,7 @@ final class RepositoryTableViewCell: UITableViewCell {
             nameLabel.text = item.name
             ownerNameLabel.text = item.ownerName
             starsLabel.text = item.numberOfStars
-            if let url = URL(string: item.ownerAvater) {
+            if let url = URL(string: item.ownerAvatar) {
                 iconImageView.setImage(from: url)
             }
         }

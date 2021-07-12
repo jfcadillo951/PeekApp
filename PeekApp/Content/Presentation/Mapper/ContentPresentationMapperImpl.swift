@@ -38,7 +38,7 @@ private extension ContentPresentationMapperImpl {
         return .init(
             name: name,
             ownerName: owner,
-            ownerAvater: value?.node?.asRepository?.fragments.repositoryDetails.owner.avatarUrl ?? "",
+            ownerAvatar: value?.node?.asRepository?.fragments.repositoryDetails.owner.avatarUrl ?? "",
             numberOfStars: stars)
     }
 }
